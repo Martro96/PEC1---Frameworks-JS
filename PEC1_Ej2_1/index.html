@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="../PEC1_Ej2_1/assets/styles/style.css">
 
     <title>Form Validator</title>
 
@@ -11,22 +11,31 @@
 <body>
     <div class="form-container">
         <h2 class="form-title">Register With Us</h2>
-        <form action="" method="post">
+        <form id="registrationForm" method="post"> <!-- action="../PEC1_Ej2_1/assets/scripts/script.php" -->
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" placeholder="Enter username" required>
+            <div class="error-message" id="usernameError"></div>
 
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" placeholder="Enter email" required>
+            <div class="error-message" id="emailError"></div>
+
+            <!-- Añado el nuevo campo para la edad-->
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" placeholder="Enter your age" required>
+            <div class="error-message" id="ageError"></div>
 
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" placeholder="Enter password" required>
+            <div class="error-message" id="passwordError"></div>
 
             <label for="confirm-password">Confirm Password:</label>
             <input type="password" id="confirm-password" name="confirm-password" placeholder="Enter password again" required>
+            <div class="error-message" id="confirmPasswordError"></div>
 
             <button type="submit">Submit</button>
         </form>
     </div>
-    
+    <script src="../PEC1_Ej2_1/assets/scripts/main.js"></script>
 </body>
 </html>

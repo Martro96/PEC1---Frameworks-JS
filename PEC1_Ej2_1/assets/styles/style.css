@@ -19,12 +19,22 @@ body {
 
 input[type="text"],
 input[type="email"],
+input[type="number"], /*Añado el type number para el estilo de la edad*/
 input[type="password"] {
     width: 90%;
     padding: 10px;
     margin: 15px 0;
     border: 1px solid #ccc;
     border-radius: 4px;
+}
+input.error { /*Creo clase para el input erróneo*/
+    border: 1px solid red;
+}
+.error-message { /*Doy estilo al mensaje para el input erróneo*/
+    color: red;
+    font-size: 0.9em;
+    margin-top: -5px;
+    margin-bottom: 10px;
 }
 button {
     width: 96%;
