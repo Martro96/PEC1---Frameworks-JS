@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seat Reservation</title>
+    <link rel="stylesheet" href="./assets/styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <h3>Select currency:</h3>
+        <select id="currency" onchange="updatePrices()">
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <!-- Agrega más monedas según sea necesario -->
+        </select>
+
+        <h3>Pick a movie:</h3>
+        <select id="movie" onchange="updateMovie()">
+            <option value="10" data-title="Avengers: Endgame">Avengers: Endgame (10 USD)</option>
+            <option value="12" data-title="Joker">Joker (12 USD)</option>
+            <option value="8" data-title="Frozen 2">Frozen 2 (8 USD)</option>
+        </select>
+        <p id="movie-price">Price: <span id="price">10</span> <span id="currency-symbol">$</span></p>
+        
+        <div class="seat-container">
+            <div class="legend">
+                <span class="legend-item"><span class="seat seat-n/a"></span> N/A</span>
+                <span class="legend-item"><span class="seat seat-selected"></span> Selected</span>
+                <span class="legend-item"><span class="seat seat-occupied"></span> Occupied</span>
+            </div>
+
+            <div class="screen"></div>
+
+            <div class="seats">
+                <div class="row">
+                    <div class="seat seat-occupied"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat seat-occupied"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                </div>
+                <div class="row">
+                    <div class="seat seat-selected"></div>
+                    <div class="seat seat-selected"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat seat-selected"></div>
+                    <div class="seat seat-selected"></div>
+                </div>
+                <!-- Puedes seguir añadiendo filas y asientos como prefieras -->
+            </div>
+        </div>
+
+        <div class="summary">
+            <p>You have selected 4 seats for a price of <strong>33.8 EUR</strong></p>
+        </div>
+    </div>
+</body>
+</html>
