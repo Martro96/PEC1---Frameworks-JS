@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: whitesmoke;
+    margin: auto;
+    padding: 100px;
+}
+.calculator-container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.calculator-logo_img {
+    width: 40%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.calculator-title, .calculator-intro {
+    align-items: center;
+    text-align: center;
+}
+.money1, .money2 {
+    display: flex;
+    justify-content: space-between;
+}
+select { /*ESTO NO SÉ SELECCIONARLO*/
+    height: 1.5em;
+    vertical-align: top;
+}
+.infoSwap {
+    display: flex;
+    justify-content: space-between;
+
+}
+.infoSwapAmount {
+    border: 1px solid blue;
+}
+
+button {
+    width: 50%;
+    margin: 15px 0;
+    padding: 12px;
+    background-color: #008cff9f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #003cff;
+}

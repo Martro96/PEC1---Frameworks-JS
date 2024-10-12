@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../PEC1_Ej2_2/assets/styles/style.css">
+
+    <title>Exchange Rate Calculator</title>
+
+</head>
+<body>
+    <div class="calculator-container">
+        <div class="calculator-logo">
+            <img class="calculator-logo_img" src="./assets/images/logo.png" alt="Logo calculator">
+        </div>
+        <h2 class="calculator-title">Exchange Rate Calculator</h2>
+        <h4 class="calculator-intro">Choose the currency and the amounts to get the exchange rate </h4>
+        <div class="calculator">
+            <form method="post">
+                <div class="money1">
+                    <select name="divisas" id="divisas">
+                        <option value="usd">Dólar estadounidense (USD)</option>
+                        <option value="eur">Euro (EUR)</option>
+                        <option value="jpy">Yen japonés (JPY)</option>
+                        <option value="gbp">Libra esterlina (GBP)</option>
+                        <option value="aud">Dólar australiano (AUD)</option>
+                        <option value="cad">Dólar canadiense (CAD)</option>
+                        <option value="chf">Franco suizo (CHF)</option>
+                        <option value="cny">Yuan chino (CNY)</option>
+                    </select>
+                    <input type="number" id="amount-A" name="amount-A" placeholder="" required>
+                </div>
+                <div class="infoSwap">
+                    <button type="submit">Swap</button>
+                    <p class="infoSwapAmount">info cambio</p>            
+
+                </div>
+                <div class="money2">
+                    <select name="divisas" id="divisas">
+                        <option value="usd">Dólar estadounidense (USD)</option>
+                        <option value="eur">Euro (EUR)</option>
+                        <option value="jpy">Yen japonés (JPY)</option>
+                        <option value="gbp">Libra esterlina (GBP)</option>
+                        <option value="aud">Dólar australiano (AUD)</option>
+                        <option value="cad">Dólar canadiense (CAD)</option>
+                        <option value="chf">Franco suizo (CHF)</option>
+                        <option value="cny">Yuan chino (CNY)</option>
+                    </select>
+                    <div class="amount-B">
+                        <input type="number" id="amount-B" name="amount-B">
+                    </div>
+                </div>        
+            </form>
+        </div>
+    </div>
+    <script src="../PEC1_Ej2_2/assets/scripts/main.js"></script>
+</body>
+</html>
