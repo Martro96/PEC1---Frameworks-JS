@@ -1,12 +1,8 @@
-/*Código validación formulario 
-NO ME FUNCIONA EL QUE UNA VEZ LE DOY A ENVIAR ESTANDO EL FORM VACÍO, SE PONGAN LOS BORDES ROJOS CON LOS MENSAJES DE ERROR
-
-ESTOS ME SALEN SI RELLENO EL FORMULARIO Y POR EJEMPLO, LAS CONTRASEÑAS LAS PONGO MAL, AHÍ SI ME SALE EN ROJO.
-*/
+/*Código validación formulario */
 document.getElementById("registrationForm").addEventListener("submit", function(event) {
     event.preventDefault(); // Evita que el formulario se envíe
 
-    // Limpia los mensajes de error previos
+    // Limpia los mensajes de error previos, es una buena práctica limpiar los datos antes de validar.
     const errorMessages = document.querySelectorAll(".error-message");
     errorMessages.forEach(msg => msg.textContent = "");
     
@@ -25,7 +21,7 @@ document.getElementById("registrationForm").addEventListener("submit", function(
 
     // Validar Email
     const email = document.getElementById("email");
-    if (!email.validity.valid) {
+    if (email.value.trim() === "") {
         email.classList.add("error");
         document.getElementById("emailError").textContent = "El email no está validado";
         isValid = false;
@@ -35,7 +31,7 @@ document.getElementById("registrationForm").addEventListener("submit", function(
 
     //Validamos edad
     const age = document.getElementById("age");
-    if (age.value < 0 || age.value >= 1000) {
+    if (age.value.trim() === "" || age.value < 0 || age.value >= 1000) {
         age.classList.add("error");
         document.getElementById("ageError").textContent = "La edad debe ser mayor a 0 e inferior a 1000.";
         isValid = false;
@@ -45,8 +41,8 @@ document.getElementById("registrationForm").addEventListener("submit", function(
 
     // Validar Password con las peticiones del enunciado
     const password = document.getElementById("password");
-    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[~!@$%^&*()_+={}|[\]\\:";'<>?,./]).{8,}$/;
-    if (!passwordRegex.test(password.value)) {
+    const passwordExpresionReg = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[~!@$%^&*()_+={}|[\]\\:";'<>?,./]).{8,}$/;
+    if (!passwordExpresionReg.test(password.value)) {
         password.classList.add("error");
         document.getElementById("passwordError").textContent = "La contraseña debe tener al menos 8 caracteres y contener mayúsculas, minúsculas, cifras y signos permitidos.";
         isValid = false;
