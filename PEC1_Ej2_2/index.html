@@ -32,7 +32,12 @@
                 </div>
                 <div class="infoSwap">
                     <button type="submit">Swap</button>
-                    <p class="infoSwapAmount">info cambio</p>            
+                    <p class="infoSwapAmount">info cambio</p>   
+                    
+                    <!--
+                        INFO DEL CAMBIO, TIENE QUE ACTUALIZARSE SEGÚN LO QUE ELIJAN. funcion onchange 
+                        <select id="infoSwapAmount" onchange="updateinfoSwapAmount()"> esto se tiene que actualizar según lo que elijan
+                    -->         
 
                 </div>
                 <div class="money2">
@@ -47,6 +52,17 @@
                         <option value="cny">Yuan chino (CNY)</option>
                     </select>
                     <div class="amount-B">
+                        <!-- 
+                            CANTIDAD DEL CAMBIO, TIENE QUE ACTUALIZARSE SEGÚN LO QUE ELIJAN. funcion onchange 
+
+                            <p id="amount-A"> 
+                                Cantidad 1 <span id="divisas-symbol">$</span> Simbolo cantidad 1 </span> 
+                                equivale a<p id="amount-B"> 
+                                Cantidad 2 <span id="divisas-symbol">$</span> Simbolo cantidad 2 </p>
+                            
+                            <select id="amount-B" onchange="updateamount-B()"> 
+                                
+                        -->         
                         <input type="number" id="amount-B" name="amount-B">
                     </div>
                 </div>        
