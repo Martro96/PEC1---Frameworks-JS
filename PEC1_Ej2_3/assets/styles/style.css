@@ -60,16 +60,16 @@ h3 {
     cursor: pointer;
 }
 
-.seat-occupied {
+.seat-occupied, .seat-occupiedLegend {
     background-color: #6c757d;
     cursor: not-allowed;
 }
 
-.seat-selected {
+.seat-selected, .seat-selectedLegend {
     background-color: #00b7c2;
 }
 
-.seat-n/a {
+.seat-n/a, .seat-n/aLegend {
     background-color: #fff;
     border: 1px solid #444451;
 }
